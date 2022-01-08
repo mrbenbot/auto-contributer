@@ -21,7 +21,7 @@ if (isBefore(today, startingSunday)) {
 shell.exec(`git config user.name "Ben Lee"`);
 shell.exec(`git config user.email "benlee.thatsme@gmail.com"`);
 
-const message = "BEN LEE";
+const message = "BEN LEE!!";
 
 const dayIndex = differenceInDays(today, startingSunday);
 const commitsPerDay = [...message]
@@ -38,7 +38,7 @@ if (dayIndex >= commitsPerDay.length) {
   shell.exec("git add .");
   shell.exec(`git commit -m 'setting next starting sunday'`);
   shell.exec("git push");
-  shell.exit(1);
+  shell.exit(0);
 }
 
 for (let i = 0; i < commitsPerDay[dayIndex]; i++) {
