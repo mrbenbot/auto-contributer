@@ -37,6 +37,7 @@ if (dayIndex >= commitsPerDay.length) {
   );
   shell.exec("git add .");
   shell.exec(`git commit -m 'setting next starting sunday'`);
+  shell.exec("git push");
   shell.exit(1);
 }
 
