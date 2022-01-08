@@ -40,11 +40,11 @@ if (dayIndex >= commitsPerDay.length) {
   shell.exit(1);
 }
 
-// for (let i = 0; i < commitsPerDay[dayIndex]; i++) {
-//   const message = `gh commit #${i + 1} on ${today.toLocaleString()}`;
-//   shell.exec(`echo "${message}" >> log.txt`);
-//   shell.exec("git add .");
-//   shell.exec(`git commit -m '${message}'`);
-// }
+for (let i = 0; i < commitsPerDay[dayIndex]; i++) {
+  const message = `gh commit #${i + 1} on ${today.toLocaleString()}`;
+  shell.exec(`echo "${message}" >> log.txt`);
+  shell.exec("git add .");
+  shell.exec(`git commit -m '${message}'`);
+}
 
-// shell.exec("git push");
+shell.exec("git push");
