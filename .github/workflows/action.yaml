@@ -2,7 +2,7 @@ name: Auto Contributer
 on:
   workflow_dispatch:
   schedule:
-    - cron: "55 15 * * *"
+    - cron: "55 7 * * *"
 jobs:
   contribute:
     runs-on: ubuntu-latest
